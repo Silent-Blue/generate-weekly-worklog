@@ -32,6 +32,7 @@ The precise range is derived from the JSON workday calendar by taking the earlie
 
 - Split by natural week, Monday to Sunday.
 - Record week number, start date, end date, and workday count.
+- `周次` must be stored as an integer value and written to the workbook as digits only.
 - If a week has fewer than 3 actual days, merge it into the adjacent week and do not emit an independent week row.
 - If the week crosses a month or year boundary, use the month/year of the later date in the workbook columns.
 
@@ -142,6 +143,7 @@ Process:
 5. Keep only semantically unique content.
 
 Do not rely only on changing verbs, project names, dates, or counts.
+If `工作内容` includes a project name, the full project name must appear without abbreviation, truncation, or shorthand.
 
 ## 9. Workbook Contract
 
@@ -217,5 +219,7 @@ Check all of the following:
 - Priority rules are respected.
 - Weekly total hours do not exceed `workday_count * 8`.
 - The workbook schema and header color match the contract.
+- `周次` is an integer and is written as digits only in the workbook.
+- Any project name mentioned in `工作内容` appears in full and is not abbreviated.
 
 If any check fails, fix the affected row set and rerun the check before writing the final workbook.

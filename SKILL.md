@@ -82,6 +82,8 @@ Before finalizing, verify:
 - Work content is unique, longer than 25 Chinese characters, and consistent with the tag.
 - Weekly total hours never exceed `工作日天数 × 8`.
 - The final workbook column order and header color are correct.
+- `周次` is written as an integer only, with no week label or extra text.
+- If `工作内容` mentions a project name, the project name must appear in full and must not be abbreviated.
 
 If any check fails, revise only the affected rows, rerun validation, and regenerate the workbook.
 
