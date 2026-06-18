@@ -1,0 +1,8 @@
+interface:
+  display_name: "Weekly Worklog"
+  short_description: "基于姓名、职责、日期和项目清单生成周工作内容.xlsx"
+  brand_color: "#4574C4"
+  default_prompt: "Use $generate-weekly-worklog with 姓名、工作职责、粗略日期范围、项目清单 to generate a validated weekly worklog .xlsx."
+
+policy:
+  allow_implicit_invocation: true
